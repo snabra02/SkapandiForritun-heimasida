@@ -1,8 +1,8 @@
 // Hér kemur kóðinn þinn:
 
 function setup() {
-  createCanvas(1000, 1000);
-  background(199, 255, 247);
+  createCanvas(2000, 1000);
+  background(0);
   frameRate(4);
 }
 
