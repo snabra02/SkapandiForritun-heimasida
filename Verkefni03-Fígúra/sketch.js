@@ -1,29 +1,49 @@
 // Hér kemur kóðinn þinn:
 var bukur = 100;
+var munnur = 0
+var munnurS = 150
 
 function setup() {
   createCanvas(2000,1000);
   rectMode(CENTER);
 }
 function draw() {
-  background(255,200,0);
+  background(224, 202, 227);
   // Teiknum búkinn
-  fill(236,36,94);
+  fill(25, 2, 28);
 
-  rect(mouseX,mouseY,40,bukur);
+  arc(mouseX + bukur/2 -50,mouseY-bukur/2, 200, 1000, PI,TWO_PI);
   // Teiknum hausinn
   fill(255);
-  arc(mouseX,mouseY-bukur, 80, 80, 0, PI + QUARTER_PI, CHORD);
-  ellipse(mouseX,mouseY - bukur/2, 80,80);
+
+  ellipse(mouseX,mouseY - bukur/2-350, 100,120);
   // Teiknum augun
   fill(0);
-  ellipse (mouseX - 25,mouseY - bukur/2, 20,20);
-  ellipse (mouseX + 25,mouseY - bukur/2, 20,20);
-  // Teiknum fæturna
-  line (mouseX - 20, mouseY + bukur/2, mouseX - 20, mouseY + bukur/2 + 50);
-  line (mouseX + 20, mouseY + bukur/2, mouseX + 20, mouseY + bukur/2 + 50);
+  ellipse (mouseX - 25,mouseY - bukur/2-350, 20,20);
+  ellipse (mouseX + 25,mouseY - bukur/2-350, 20,20);
+  // Teiknum munn
+
+
+  fill(143, 25, 21);
+  ellipse(mouseX,mouseY - bukur/2-150, 80,munnur);
+  noStroke();
+  fill(227, 106, 102);
+  ellipse(mouseX,mouseY - bukur/2-munnurS, 40 , munnur/2);
+
+  //Teiknum merki
+  fill(158, 100, 217);
+  noStroke;
+  triangle(mouseX, mouseY, 58, 20, 86, 75);
+
 }
 
 function mousePressed() {
-	bukur = random (50,150);
+	//bukur = random (50,150);
+  munnur = (munnur+10);
+  munnurS = (munnurS-3);
+
+  if(munnur==200){
+    munnur=0;
+    munnurS=150
+  }
 }
