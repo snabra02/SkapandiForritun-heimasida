@@ -9,6 +9,8 @@ function setup() {
 }
 function draw() {
   background(224, 202, 227);
+
+
   // Teiknum búkinn
   fill(25, 2, 28);
 
@@ -19,21 +21,30 @@ function draw() {
   ellipse(mouseX,mouseY - bukur/2-350, 100,120);
   // Teiknum augun
   fill(0);
-  ellipse (mouseX - 25,mouseY - bukur/2-350, 20,20);
-  ellipse (mouseX + 25,mouseY - bukur/2-350, 20,20);
+  ellipse (mouseX - 25,mouseY - bukur/2-360, 20,15);
+  ellipse (mouseX + 25,mouseY - bukur/2-360, 20,15);
+
+  ellipse (mouseX - 25,mouseY - bukur/2-345, 20,5);
+  ellipse (mouseX + 25,mouseY - bukur/2-345, 20,5);
   // Teiknum munn
 
 
   fill(143, 25, 21);
-  ellipse(mouseX,mouseY - bukur/2-150, 80,munnur);
+  ellipse(mouseX,mouseY - bukur/2-150, 100,munnur);
   noStroke();
   fill(227, 106, 102);
   ellipse(mouseX,mouseY - bukur/2-munnurS, 40 , munnur/2);
 
-  //Teiknum merki
-  fill(158, 100, 217);
-  noStroke;
-  triangle(mouseX, mouseY, 58, 20, 86, 75);
+  //teiknna merki
+  fill(211, 165, 230);
+  arc (mouseX - 25,mouseY - bukur/2-370, 15,40,PI, TWO_PI);
+  arc (mouseX + 25,mouseY - bukur/2-370, 15,40,PI, TWO_PI);
+
+  arc (mouseX - 25,mouseY - bukur/2-340, 15,40,0, TWO_PI+PI);
+  arc (mouseX + 25,mouseY - bukur/2-340, 15,40,0, TWO_PI+PI);
+
+
+
 
 }
 
