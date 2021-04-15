@@ -26,6 +26,9 @@ function draw() {
 
   ellipse (mouseX - 25,mouseY - bukur/2-345, 20,5);
   ellipse (mouseX + 25,mouseY - bukur/2-345, 20,5);
+
+  fill(0);
+  ellipse(mouseX,mouseY - bukur/2-310, 40,5);
   // Teiknum munn
 
 
